@@ -31,10 +31,13 @@ killall -USR1 termite
 xrdb -merge ~/.Xdefaults
 
 # Restart xmonad, and thus polybar
-pushd ~/.xmonad
-./generate.py > xmonad.hs
-popd
-xmonad --restart 2>&1
+#pushd ~/.xmonad
+#./generate.py > xmonad.hs
+#popd
+#xmonad --restart 2>&1
+
+# Restart Qtile
+qtile cmd-obj -o cmd -f restart
 
 # Tell the remote vim named "preview" to reload its config.
 vim --servername preview --remote-send ':source ~/.vim/vimrc<CR>'
