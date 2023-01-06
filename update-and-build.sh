@@ -3,7 +3,7 @@ sudo pip install pybase16-builder
 git submodule update --init --recursive
 rm -rf ./output ./schemes ./sources ./templates
 mkdir -p /tmp/go
-GOPATH=/tmp/go go get github.com/thefryscorer/schemer2
+GOPATH=/tmp/go go install github.com/thefryscorer/schemer2@latest
 chown -R lainproliant /tmp/go
 chmod -R u+rwx /tmp/go
 cp /tmp/go/bin/schemer2 .
