@@ -10,7 +10,7 @@ fi
 files=(
    ~/.Xdefaults
    ~/.vim/base16.vim
-   ~/.config/alacritty/alacritty.yml.jinja
+   ~/.config/alacritty/alacritty.toml.jinja
    ~/.config/rofi/base16.rasi
    )
 
@@ -21,7 +21,7 @@ done
 
 # Regen alacritty's config.
 pushd ~/.config/alacritty
-./generate.py > alacritty.yml
+./generate.py > alacritty.toml
 popd
 
 # Tell all termites to reload their configs.
